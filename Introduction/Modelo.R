@@ -1,6 +1,6 @@
 # Stress test using Colombian Data
 # Duvan Mejia Cortes
-# Universidad Surcolombiana
+# Universidad Surcolombiana.
 
 
 library(urca)
@@ -13,7 +13,7 @@ library(tidyverse)
 #Load the Dataset
 okun <- read.csv(file.choose())
 
-# A simple graph 
+# A simple graph
 ggplot(data = okun) + geom_point(mapping = aes(x = unem, y = real_gdp_growth))
 
 #Declare our time Series Variables
@@ -45,4 +45,3 @@ lagselect$selection
 #Building VAR
 ModelOkun1 <- VAR(okun.bv, p = 4, type = "const", season = NULL, exog = NULL)
 summary(ModelOkun1)
-
